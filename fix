@@ -1,0 +1,39 @@
+# Fix Client
+
+One app, like Lunar Client / Badlion: open it, sign in with Microsoft, pick a Minecraft version, press LAUNCH.
+- 1.8.9  -> Badlion-style features
+- 1.9 and newer (up to the latest, 26.3) -> Lunar-style features
+- Press Right Shift in the game to open the Fix menu. C = zoom.
+- Java is installed automatically. There is also a Mods page (Modrinth search and install).
+
+## Get the installer (.exe) without installing anything on your PC
+1. Create a free account on github.com and a new repository.
+2. Upload ALL files and folders of this project (also the hidden .github folder).
+3. Open the "Actions" tab. Wait until the run finishes (some version jobs may be red, that is OK).
+4. Open the finished run. At the bottom, download **Fix-Client-Installer**. Unzip it.
+5. Inside is "Fix Client Setup 1.0.0.exe". Install it and give the same file to everyone.
+
+## Folders
+- app/            the Fix Client program (Electron). app/mods/index.json says which mod jar belongs to which Minecraft version.
+- forge-1.8.9/    in-game mod for 1.8.9 (Forge)
+- fabric-1.21/    in-game mod for 1.20 to 1.21.8 (Fabric). patches/ turns the 1.21 code into the 1.20 code
+- fabric-26/      in-game mod for 26.1 to 26.3 (Fabric, Java 25) and 1.21.11 (patches/ converts it)
+
+## Which versions have the in-game Fix menu
+| Minecraft | Loader | Status |
+|---|---|---|
+| 1.8.9 | Forge | built now (Badlion-style) |
+| 1.21 to 1.21.8 | Fabric | built now (Lunar-style) |
+| 1.9 to 1.12.2 | Forge | next |
+| 1.20 to 1.20.6 | Fabric | built now (Lunar-style, patched port, may need fixes) |
+| 1.14 to 1.19.4 | Fabric | next (own code port) |
+| 1.21.11 | Fabric | built now (converted from the 26 code, may need fixes) |
+| 1.21.9 to 1.21.10 | Fabric | next |
+| 26.1 to 26.3 | Fabric | built now (smaller feature set: FPS, CPS, Ping, Keystrokes, Coordinates, Server Address, Playtime, Clock, Memory, Toggle Sprint) |
+
+Every version from 1.8.9 to the latest already shows in the version list and launches. Versions without a mod build yet start normally and get the Fix menu when their build is added.
+
+## Features that work now
+HUD: FPS, CPS, Ping, Keystrokes, Coordinates, Armor Status, Potion Status (1.8.9 only), Direction, Clock, Memory, Item Counter, Server Address, Playtime, Day Counter
+PvP: Combo Counter, Reach Display, Hitboxes
+Other: Zoom, Always Day, Toggle Sprint
